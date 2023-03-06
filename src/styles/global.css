@@ -1,0 +1,143 @@
+
+@tailwind components;
+@tailwind base;
+
+@layer base {
+  @font-face {
+    font-family: 'NotoSans';
+    src: url('../public/fonts/notoSans-Regular.ttf') format('ttf');
+    font-display: optional;
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+  }
+}
+
+@layer components {
+  .style-grid-col-spacing {
+    @apply mx-5 gap-4 md:mx-8 lg:mx-11 lg:gap-5;
+  }
+
+  .style-grid-centered {
+    margin: 0 auto;
+    @apply max-w-[1440px] px-5 md:px-11;
+  }
+
+  .style-grid-centered-extended {
+    margin: 0 auto;
+    @apply max-w-[1920px] px-5 md:px-11;
+  }
+
+  .style-general-leading {
+    letter-spacing: -0.02em;
+  }
+
+  .style-grid-full-extended {
+    @apply style-grid-col-spacing style-grid-centered-extended grid grid-cols-6 md:grid-cols-12;
+  }
+
+  .style-grid-full {
+    @apply style-grid-col-spacing style-grid-centered grid grid-cols-6 md:grid-cols-12;
+  }
+
+  .style-grid-full-no-margin {
+    @apply grid max-w-[1440px] grid-cols-6 gap-4 md:grid-cols-12 lg:gap-5;
+  }
+
+  .style-grid-mid {
+    @apply style-grid-col-spacing style-grid-centered grid grid-cols-4 md:grid-cols-8;
+  }
+
+  .style-grid-half {
+    @apply style-grid-col-spacing grid grid-cols-6;
+  }
+
+  .style-grid-span-half {
+    @apply col-span-12 md:col-span-6;
+  }
+
+  .style-flex-center {
+    @apply flex items-center justify-center;
+  }
+  /* English styles */
+  .style-headline-infographic {
+    @apply style-general-leading text-size80 md:text-size140;
+  }
+  .style-headline-large-1 {
+    @apply style-general-leading text-size40 md:text-size120;
+  }
+  .style-headline-large-2 {
+    @apply style-general-leading text-size36 md:text-size80;
+  }
+  .style-headline-large-2-alt {
+    @apply style-general-leading text-size64 md:text-size80;
+  }
+  .style-headline-1 {
+    @apply style-general-leading text-size32 md:text-size64;
+  }
+  .style-headline-2 {
+    @apply style-general-leading text-size24 md:text-size48;
+  }
+  .style-headline-3 {
+    @apply style-general-leading text-size21 md:text-size40;
+  }
+  .style-headline-4 {
+    @apply style-general-leading text-size18 md:text-size32;
+  }
+  .style-headline-5 {
+    @apply style-general-leading text-size18 md:text-size24;
+  }
+  .style-body-infographic {
+    @apply style-general-leading text-size16 md:text-size18;
+  }
+  .style-body {
+    @apply style-general-leading text-size18;
+  }
+  .style-body-s {
+    @apply style-general-leading text-size16;
+  }
+  .style-legal {
+    @apply style-general-leading text-size14;
+  }
+  .style-link {
+    @apply style-general-leading text-size16 md:text-size16;
+  }
+
+  .style-button {
+    @apply style-general-leading text-size18 md:text-size18;
+    line-height: 18px;
+  }
+
+  .style-button-small {
+    @apply style-general-leading text-size16 md:text-size16;
+    line-height: 16px;
+  }
+
+  .style-button-legal {
+    @apply style-general-leading text-size14 md:text-size14;
+    line-height: 14px;
+  }
+
+  .carousel-scrollbar::-webkit-scrollbar-thumb {
+    @apply rounded-[10px] border-[5px] border-solid border-transparent bg-clip-content shadow-[inset_0_0_0_10px];
+  }
+  .carousel-scrollbar::-webkit-scrollbar-track {
+    @apply mx-5 bg-transparent md:mx-11 min-[1440px]:mx-0;
+  }
+  .carousel-scrollbar::-webkit-scrollbar {
+    @apply h-[14px];
+  }
+
+  html ::-webkit-scrollbar,
+  html * ::-webkit-scrollbar {
+    width: 7px;
+  }
+  html ::-webkit-scrollbar-thumb,
+  html * ::-webkit-scrollbar-thumb {
+    background: #000;
+  }
+  html ::-webkit-scrollbar-track,
+  html * ::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+}

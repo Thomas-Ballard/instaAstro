@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e90552e3-721e-4087-959f-6c940dc723aa" name="Changes" comment="" />
+    <list default="true" id="e90552e3-721e-4087-959f-6c940dc723aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/public/fonts/NotoSans-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/fr/index.astro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Layout.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Layout.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,15 +34,24 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/Thomas.Ballard/git/astro/astro-insta",
+    "last_opened_file_path": "/Users/Thomas.Ballard/git/astro/astro-insta/src/pages/fr",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/fr" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/fonts" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -41,6 +61,8 @@
       <option name="presentableId" value="Default" />
       <updated>1677859417155</updated>
       <workItem from="1677859424465" duration="766000" />
+      <workItem from="1678093826090" duration="616000" />
+      <workItem from="1678094513945" duration="5457000" />
     </task>
     <servers />
   </component>
