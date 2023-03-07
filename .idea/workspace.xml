@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e90552e3-721e-4087-959f-6c940dc723aa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/FeaturedImage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/imageGrid.astro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/posts/[...slug].astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/env.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/env.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/fr/index.astro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/imageGrid.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageGrid.astro" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/posts/[...slug].astro" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +58,7 @@
       <workItem from="1677859424465" duration="766000" />
       <workItem from="1678093826090" duration="616000" />
       <workItem from="1678094513945" duration="15308000" />
-      <workItem from="1678180570981" duration="3282000" />
+      <workItem from="1678180570981" duration="3642000" />
     </task>
     <servers />
   </component>
