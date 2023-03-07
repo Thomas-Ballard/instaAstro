@@ -1,5 +1,5 @@
 ---
-import GenericImageGrid from '../components/genericImageGrid.astro';
+import ImageGrid from '../components/imageGrid.astro';
 import Layout from '../layouts/Layout.astro';
 
 let imageGridData: { id: string; url: string; }[] = [];
@@ -16,7 +16,7 @@ return response.json();
 <Layout title="Homepage">
 	<main>
 		<ul role="list" class="link-card-grid">
-            <GenericImageGrid images={imageGridData}></GenericImageGrid>
+            <ImageGrid images={imageGridData}></ImageGrid>
 		</ul>
 	</main>
 </Layout>
