@@ -1,0 +1,26 @@
+---
+export interface Props {
+images: array;
+}
+
+import { Image, Picture } from '@astrojs/image/components';
+const { images } = Astro.props;
+---
+
+<div class="w-3/4 mx-auto lg:columns-3 sm:columns-2">
+    {images.length
+    ? images.map((item, index) => {
+    return (
+    <a href={`/posts/${item.id}`}>
+        <div class="cursor-pointer gap-[5px] inline-block w-full group">
+            <figure class={`relative h-64 ${index % 2 == 0 ? "md:h-96" : "md:h-64"} w-full hidden md:block mb-3 sm:mb-0 mr-6 border border-gray-100 overflow-hidden rounded-lg transform group-hover:translate-x-0 group-hover:shadow group-hover:translate-y-0 transition duration-700 ease-out overflow-hidden`}>
+            <div class="absolute w-full h-full object-cover rounded-lg transform group-hover:scale-105 transition duration-700 ease-out cursor-pointer">
+                <Image width={300} aspectRatio="1:1" format="webp" fit="cover" position="attention" class="rounded-lg h-full w-full object-cover" src={item.url}></Image>
+            </div>
+            </figure>
+        </div>
+    </a>
+    );
+    })
+    : null}
+</div>

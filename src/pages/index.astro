@@ -1,33 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import ImageGrid from '../components/ImageGrid.astro';
 
-
+let imageGridData = [];
+const userData = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url&access_token=${import.meta.env.ACCESS_TOKEN}`).then(function(response) {
+return response.json();
+}).then(function(data) {
+    const imageData = data.data;
+    for (const entry in imageData) {
+        imageGridData.push({ id: imageData[entry].id, url: imageData[entry].media_url});
+    }
+});
 ---
 
 <Layout title="Homepage">
 	<main>
 		<ul role="list" class="link-card-grid">
-			<Card
-				href="/fr/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
+            <ImageGrid images={imageGridData} is:client></ImageGrid>
 		</ul>
 	</main>
 </Layout>
