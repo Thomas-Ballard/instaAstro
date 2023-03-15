@@ -1,9 +1,9 @@
 import * as adapter from '@astrojs/netlify/netlify-functions.js';
 import React, { createElement } from 'react';
 import ReactDOM from 'react-dom/server';
-import { g as server_default, h as deserializeManifest } from './chunks/astro.ac8074ba.mjs';
-import { _ as _page0, b as _page3, c as _page4 } from './chunks/pages/all.35e51ca9.mjs';
-import { _ as _page1, a as _page2 } from './chunks/prerender.c3051c59.mjs';
+import { g as server_default, h as deserializeManifest } from './chunks/astro.00e5cf20.mjs';
+import { _ as _page0, b as _page3 } from './chunks/pages/all.91ca0fd6.mjs';
+import { _ as _page1, a as _page2, b as _page4 } from './chunks/prerender.f89dc8d0.mjs';
 import 'mime';
 import 'cookie';
 import 'html-escaper';
@@ -12,7 +12,7 @@ import 'slash';
 import 'path-to-regexp';
 import 'string-width';
 import 'sharp';
-/* empty css                                  */import 'node:fs/promises';
+/* empty css                                  *//* empty css                                  */import 'node:fs/promises';
 import 'node:path';
 import 'node:url';
 import 'http-cache-semantics';
@@ -20,8 +20,9 @@ import 'node:os';
 import 'image-size';
 import 'magic-string';
 import 'node:stream';
-/* empty css                                  */import '@nanostores/persistent';
-/* empty css                                 *//* empty css                                   */
+import '@nanostores/persistent';
+/* empty css                                 *//* empty css                                   */import 'dayjs';
+
 /**
  * Astro passes `children` as a string of HTML, so we need
  * a wrapper `div` to render that content as VNodes.
@@ -221,7 +222,7 @@ const _renderer1 = {
 const pageMap = new Map([["node_modules/@astrojs/image/dist/endpoint.js", _page0],["src/pages/index.astro", _page1],["src/pages/generic.astro", _page2],["src/pages/framer/framer.astro", _page3],["src/pages/posts/[...slug].astro", _page4],]);
 const renderers = [Object.assign({"name":"astro:jsx","serverEntrypoint":"astro/jsx/server.js","jsxImportSource":"astro"}, { ssr: server_default }),Object.assign({"name":"@astrojs/react","clientEntrypoint":"@astrojs/react/client.js","serverEntrypoint":"@astrojs/react/server.js","jsxImportSource":"react"}, { ssr: _renderer1 }),];
 
-const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"index.html","links":[],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","prerender":true,"_meta":{"trailingSlash":"ignore"}}},{"file":"generic/index.html","links":[],"scripts":[],"routeData":{"route":"/generic","type":"page","pattern":"^\\/generic\\/?$","segments":[[{"content":"generic","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/generic.astro","pathname":"/generic","prerender":true,"_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/@astrojs/image/dist/endpoint.js","pathname":"/_image","prerender":false,"_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["_astro/framer.0a50aad2.css","_astro/framer.4a70464a.css"],"scripts":[],"routeData":{"route":"/framer/framer","type":"page","pattern":"^\\/framer\\/framer\\/?$","segments":[[{"content":"framer","dynamic":false,"spread":false}],[{"content":"framer","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/framer/framer.astro","pathname":"/framer/framer","prerender":false,"_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["_astro/framer.0a50aad2.css"],"scripts":[],"routeData":{"route":"/posts/[...slug]","type":"page","pattern":"^\\/posts(?:\\/(.*?))?\\/?$","segments":[[{"content":"posts","dynamic":false,"spread":false}],[{"content":"...slug","dynamic":true,"spread":true}]],"params":["...slug"],"component":"src/pages/posts/[...slug].astro","prerender":false,"_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"gfm":true,"smartypants":true,"contentDir":"file:///Users/Thomas.Ballard/git/astro/astro-insta/src/content/"},"pageMap":null,"propagation":[],"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"_@astrojs-ssr-virtual-entry.mjs","/Users/Thomas.Ballard/git/astro/astro-insta/src/components/FramerDrag":"_astro/FramerDrag.ed8d3879.js","@astrojs/react/client.js":"_astro/client.502e3c6a.js","astro:scripts/before-hydration.js":""},"assets":["/_astro/framer.0a50aad2.css","/_astro/framer.4a70464a.css","/_astro/generic.0c497a07.css","/_astro/index.1eefd156.css","/favicon.svg","/fonts/NotoSans-Regular.ttf","/_astro/FramerDrag.ed8d3879.js","/_astro/client.502e3c6a.js","/_astro/index.f1bc5ebf.js","/index.html","/generic/index.html"]}), {
+const _manifest = Object.assign(deserializeManifest({"adapterName":"@astrojs/netlify/functions","routes":[{"file":"index.html","links":[],"scripts":[],"routeData":{"route":"/","type":"page","pattern":"^\\/$","segments":[],"params":[],"component":"src/pages/index.astro","pathname":"/","prerender":true,"_meta":{"trailingSlash":"ignore"}}},{"file":"generic/index.html","links":[],"scripts":[],"routeData":{"route":"/generic","type":"page","pattern":"^\\/generic\\/?$","segments":[[{"content":"generic","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/generic.astro","pathname":"/generic","prerender":true,"_meta":{"trailingSlash":"ignore"}}},{"file":"","links":[],"scripts":[],"routeData":{"type":"endpoint","route":"/_image","pattern":"^\\/_image$","segments":[[{"content":"_image","dynamic":false,"spread":false}]],"params":[],"component":"node_modules/@astrojs/image/dist/endpoint.js","pathname":"/_image","prerender":false,"_meta":{"trailingSlash":"ignore"}}},{"file":"","links":["_astro/framer.7b950fd1.css","_astro/framer.4a70464a.css"],"scripts":[],"routeData":{"route":"/framer/framer","type":"page","pattern":"^\\/framer\\/framer\\/?$","segments":[[{"content":"framer","dynamic":false,"spread":false}],[{"content":"framer","dynamic":false,"spread":false}]],"params":[],"component":"src/pages/framer/framer.astro","pathname":"/framer/framer","prerender":false,"_meta":{"trailingSlash":"ignore"}}}],"base":"/","markdown":{"drafts":false,"syntaxHighlight":"shiki","shikiConfig":{"langs":[],"theme":"github-dark","wrap":false},"remarkPlugins":[],"rehypePlugins":[],"remarkRehype":{},"gfm":true,"smartypants":true},"pageMap":null,"propagation":[],"renderers":[],"entryModules":{"\u0000@astrojs-ssr-virtual-entry":"_@astrojs-ssr-virtual-entry.mjs","/Users/Thomas.Ballard/git/astro/astro-insta/src/components/FramerDrag":"_astro/FramerDrag.aed208c5.js","@astrojs/react/client.js":"_astro/client.502e3c6a.js","astro:scripts/before-hydration.js":""},"assets":["/_astro/framer.7b950fd1.css","/_astro/framer.4a70464a.css","/_astro/generic.0c497a07.css","/_astro/index.1eefd156.css","/favicon.svg","/fonts/NotoSans-Regular.ttf","/_astro/FramerDrag.aed208c5.js","/_astro/client.502e3c6a.js","/_astro/index.f1bc5ebf.js","/index.html","/generic/index.html"]}), {
 	pageMap: pageMap,
 	renderers: renderers
 });

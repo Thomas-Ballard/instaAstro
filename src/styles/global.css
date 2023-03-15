@@ -4,8 +4,8 @@
 
 @layer base {
   @font-face {
-    font-family: 'NotoSans';
-    src: url('../public/fonts/notoSans-Regular.ttf') format('ttf');
+    font-family: 'Noto Sans';
+    src: url('/fonts/notoSans-Regular.ttf') format('ttf');
     font-display: optional;
     font-weight: 400;
     font-style: normal;
@@ -14,6 +14,10 @@
 }
 
 @layer components {
+  :root {
+    --font-notoSans: 'Noto Sans';
+  }
+
   .style-grid-col-spacing {
     @apply mx-5 gap-4 md:mx-8 lg:mx-11 lg:gap-5;
   }
@@ -141,3 +145,4 @@
     background: #ddd;
   }
 }
+

@@ -12,6 +12,7 @@ let imageEntryObj: { id: string; url: string; caption: string; }[] = [];
     const userData = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp&access_token=${import.meta.env.ACCESS_TOKEN}`).then(function(response) {
     return response.json();
     }).then(function(data) {
+		console.log(data)
     const imageData = data.data;
     for (const entry in imageData) {
 		imageEntryObj.push({ id: imageData[entry].id, url: imageData[entry].media_url, caption: imageData[entry].caption, timestamp: imageData[entry].timestamp});

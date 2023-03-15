@@ -1,23 +1,48 @@
 ---
-const pages = [
-  {
-    slug: undefined,
-  }
-];
-
-const { slug } = Astro.params;
+export const prerender = true;
 import Layout from '../../layouts/Layout.astro';
 import { persistentAtom } from '@nanostores/persistent'
-import { Picture } from '@astrojs/image/components';
+import { Image } from 'astro:assets';
 import dayjs from 'dayjs';
 
-
+const { slug } = Astro.params;
 const imageStore = JSON.parse(persistentAtom('images').get());
+const imageIds = [];
+imageStore.forEach(image => {
+  imageIds.push(image.id);
+});
+
+const pages = imageIds.map((item) => ({
+  slug: item
+}));
+
+console.log(pages);
+
 const foundImage = imageStore.filter(image => {
   if (image.id === slug) {
     return image;
   }
 })
+
+export async function getStaticPaths() {
+  const imageStore = JSON.parse(persistentAtom('images').get());
+  const imageIds = [];
+imageStore.forEach(image => {
+  imageIds.push(image.id);
+});
+
+const pages = imageIds.map((item) => ({
+  slug: item,
+}));
+return pages.map(({ slug }) => {
+    return {
+      params: { slug },
+      props: { title: 'A post by Tom Ballard' },
+    };
+  });
+}
+
+
 const caption = foundImage[0].caption.split(/\r?\n/);
 const datePosted = dayjs(foundImage[0].timestamp).format('dddd DD MMMM - YYYY');
 
@@ -27,7 +52,7 @@ const datePosted = dayjs(foundImage[0].timestamp).format('dddd DD MMMM - YYYY');
     <h1 class="style-headline-2 tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Posted on {datePosted}</h1>
     <div class="flex flex-row justify-center items-center">
       <div class='w-1/2 h-full'>
-    <Picture alt="nature photo" widths={[600, 1000, 1440]} aspectRatio="4:5" format="webp" fit="inside" class="rounded-lg h-full w-full object-contain" src={foundImage[0].url}></Picture>
+    <Image alt="nature photo" height='1440' width='1440' format="webp" fit="inside" class="rounded-lg h-full w-full object-contain" src={foundImage[0].url}></Image>
   </div>
   <div class='w-1/2 h-full flex flex-col justify-center'>
     <div>

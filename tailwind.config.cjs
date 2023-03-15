@@ -85,22 +85,7 @@ module.exports = {
         DEFAULT: '10px',
       },
       fontFamily: {
-        ja: [
-          'var(--font-neurialGrotesk)',
-          'Noto Sans JP',
-          ...defaultTheme.fontFamily.sans,
-        ],
-        zh: [
-          'var(--font-neurialGrotesk)',
-          'Noto Sans SC',
-          ...defaultTheme.fontFamily.sans,
-        ],
-        ko: [
-          'var(--font-neurialGrotesk)',
-          'Noto Sans KR',
-          ...defaultTheme.fontFamily.sans,
-        ],
-        sans: ['var(--font-neurialGrotesk)', ...defaultTheme.fontFamily.sans],
+        sans: ['Noto Sans', ...defaultTheme.fontFamily.sans],
       },
       margin: {
         'gutter-desktop': '70px',
