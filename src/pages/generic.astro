@@ -1,6 +1,6 @@
 ---
 export const prerender = true;
-import GenericImageGrid from '../components/genericImageGrid.astro';
+import GenericImageGrid from '../components/GenericImageGrid.astro';
 import Layout from '../layouts/Layout.astro';
 import { persistentAtom } from '@nanostores/persistent'
 const imageStore = JSON.parse(persistentAtom('images').get());
