@@ -4,6 +4,8 @@ import Layout from '../../layouts/Layout.astro';
 import { persistentAtom } from '@nanostores/persistent'
 import { Image } from 'astro:assets';
 import dayjs from 'dayjs';
+import { generateCloudinaryUrl } from '../../components/imgUrlGen.js';
+import { retrieveUrl } from '../../components/retrieveUrl.js';
 
 const { slug } = Astro.params;
 const imageStore = JSON.parse(persistentAtom('images').get());
@@ -16,7 +18,6 @@ const pages = imageIds.map((item) => ({
   slug: item
 }));
 
-console.log(pages);
 
 const foundImage = imageStore.filter(image => {
   if (image.id === slug) {
@@ -46,14 +47,13 @@ return pages.map(({ slug }) => {
 const caption = foundImage[0].caption.split(/\r?\n/);
 const datePosted = dayjs(foundImage[0].timestamp).format('dddd DD MMMM - YYYY');
 
+// <Image alt="nature photo" height='1440' width='1440' format="webp" fit="inside" class="rounded-lg h-full w-full object-contain" src={foundImage[0].url}></Image>
 ---
   <Layout title="A post by Tom Ballard">
   <div class="max-w-[1440px] flex flex-col min-h-[100svh] justify-around mx-auto bg-slate-200 p-10">
     <h1 class="style-headline-2 tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Posted on {datePosted}</h1>
     <div class="flex flex-row justify-center items-center">
-      <div class='w-1/2 h-full'>
-    <Image alt="nature photo" height='1440' width='1440' format="webp" fit="inside" class="rounded-lg h-full w-full object-contain" src={foundImage[0].url}></Image>
-  </div>
+      <a target='_blank' class='w-1/2 h-full' href={retrieveUrl(foundImage[0])} set:html={generateCloudinaryUrl(foundImage[0], 0, 1440)}></a>
   <div class='w-1/2 h-full flex flex-col justify-center'>
     <div>
     {caption.map(para => <p class='style-body py-2 px-5 whitespace-pre-line empty:hidden last:italic'>{para}</p>)}
