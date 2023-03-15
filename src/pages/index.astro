@@ -1,28 +1,35 @@
 ---
+export const prerender = true;
+import { persistentAtom } from '@nanostores/persistent'
 import ImageGrid from '../components/imageGrid.astro';
 import Layout from '../layouts/Layout.astro';
 
-let imageGridData: { id: string; url: string; }[] = [];
-const userData = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url&access_token=${import.meta.env.ACCESS_TOKEN}`).then(function(response) {
-return response.json();
-}).then(function(data) {
+export const imageStore = persistentAtom<ImageEntries[]>('images', [], {
+  encode: JSON.stringify,
+  decode: JSON.parse,
+})
+let imageEntryObj: { id: string; url: string; caption: string; }[] = [];
+    const userData = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url,timestamp&access_token=${import.meta.env.ACCESS_TOKEN}`).then(function(response) {
+    return response.json();
+    }).then(function(data) {
     const imageData = data.data;
     for (const entry in imageData) {
-        imageGridData.push({ id: imageData[entry].id, url: imageData[entry].media_url});
+		imageEntryObj.push({ id: imageData[entry].id, url: imageData[entry].media_url, caption: imageData[entry].caption, timestamp: imageData[entry].timestamp});
     }
+	imageStore.set(imageEntryObj);
 });
+const imageStoreValues = JSON.parse(persistentAtom('images').get());
 ---
 
-<Layout title="Homepage">
+<Layout>
 	<main>
 		<ul role="list" class="link-card-grid">
-            <ImageGrid images={imageGridData}></ImageGrid>
+            <ImageGrid images={imageStoreValues}></ImageGrid>
 		</ul>
 	</main>
 </Layout>
 
 <style>
-
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));

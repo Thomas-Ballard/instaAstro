@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e90552e3-721e-4087-959f-6c940dc723aa" name="Changes" comment="" />
+    <list default="true" id="e90552e3-721e-4087-959f-6c940dc723aa" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.astro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FeaturedImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FeaturedImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/GenericImageGrid.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/GenericImageGrid.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/imageGrid.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/imageGrid.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layouts/Layout.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Layout.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/generic.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/generic.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,6 +66,9 @@
       <workItem from="1678093826090" duration="616000" />
       <workItem from="1678094513945" duration="15308000" />
       <workItem from="1678180570981" duration="3946000" />
+      <workItem from="1678210988802" duration="5000" />
+      <workItem from="1678272212160" duration="7000" />
+      <workItem from="1678441910571" duration="2037000" />
     </task>
     <servers />
   </component>

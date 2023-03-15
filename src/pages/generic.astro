@@ -1,22 +1,15 @@
 ---
-import ImageGrid from '../components/imageGrid.astro';
+export const prerender = true;
+import GenericImageGrid from '../components/genericImageGrid.astro';
 import Layout from '../layouts/Layout.astro';
-
-let imageGridData: { id: string; url: string; }[] = [];
-const userData = await fetch(`https://graph.instagram.com/me/media?fields=id,caption,media_url&access_token=${import.meta.env.ACCESS_TOKEN}`).then(function(response) {
-return response.json();
-}).then(function(data) {
-    const imageData = data.data;
-    for (const entry in imageData) {
-        imageGridData.push({ id: imageData[entry].id, url: imageData[entry].media_url});
-    }
-});
+import { persistentAtom } from '@nanostores/persistent'
+const imageStore = JSON.parse(persistentAtom('images').get());
 ---
 
 <Layout title="Homepage">
 	<main>
 		<ul role="list" class="link-card-grid">
-            <ImageGrid images={imageGridData}></ImageGrid>
+            <GenericImageGrid images={imageStore}></GenericImageGrid>
 		</ul>
 	</main>
 </Layout>

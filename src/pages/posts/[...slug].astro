@@ -1,0 +1,42 @@
+---
+const pages = [
+  {
+    slug: undefined,
+  }
+];
+
+const { slug } = Astro.params;
+import Layout from '../../layouts/Layout.astro';
+import { persistentAtom } from '@nanostores/persistent'
+import { Picture } from '@astrojs/image/components';
+import dayjs from 'dayjs';
+
+
+const imageStore = JSON.parse(persistentAtom('images').get());
+const foundImage = imageStore.filter(image => {
+  if (image.id === slug) {
+    return image;
+  }
+})
+const caption = foundImage[0].caption.split(/\r?\n/);
+const datePosted = dayjs(foundImage[0].timestamp).format('dddd DD MMMM - YYYY');
+
+---
+  <Layout title="A post by Tom Ballard">
+  <div class="max-w-[1440px] flex flex-col min-h-[100svh] justify-around mx-auto bg-slate-200 p-10">
+    <h1 class="style-headline-2 tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Posted on {datePosted}</h1>
+    <div class="flex flex-row justify-center items-center">
+      <div class='w-1/2 h-full'>
+    <Picture alt="nature photo" widths={[600, 1000, 1440]} aspectRatio="4:5" format="webp" fit="inside" class="rounded-lg h-full w-full object-contain" src={foundImage[0].url}></Picture>
+  </div>
+  <div class='w-1/2 h-full flex flex-col justify-center'>
+    <div>
+    {caption.map(para => <p class='style-body py-2 px-5 whitespace-pre-line empty:hidden last:italic'>{para}</p>)}
+    </div>
+    <a class="mt-8 m-5 inline-block w-auto" href='/'>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Return</button>
+    </a>
+  </div>
+    </div>
+  </div>
+</Layout>
